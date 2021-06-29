@@ -5,7 +5,7 @@ Settings for VS Code
 - [Consolas Ligaturized](https://github.com/somq/consolas-ligaturized) - Standard Consolas font with FiraCode ligatures.
 - [Fira Code iScript](https://github.com/kencrocken/FiraCodeiScript) - Mashup Font of FiraCode and Script12.
 - [FiraCode](https://github.com/tonsky/FiraCode) - Free monospaced font with programming ligatures.
-> We are looking for fonts for development [here](https://devfonts.gafi.dev/).
+> [Dev Fonts](https://devfonts.gafi.dev/).
 
 
 
