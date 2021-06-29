@@ -1,8 +1,12 @@
 # vscode-settings.json
 Settings for VS Code
 
-## Fonts
+## Font
 - [Consolas Ligaturized](https://github.com/somq/consolas-ligaturized) - Standard Consolas font with FiraCode ligatures.
-- [FiraCode](https://github.com/tonsky/FiraCode) - Free monospaced font with programming ligatures
-- [Fira Code iScript](https://github.com/kencrocken/FiraCodeiScript) - Mashup Font of FiraCode and Script12
+- [Fira Code iScript](https://github.com/kencrocken/FiraCodeiScript) - Mashup Font of FiraCode and Script12.
+- [FiraCode](https://github.com/tonsky/FiraCode) - Free monospaced font with programming ligatures.
+> We are looking for fonts for development [here](https://devfonts.gafi.dev/).
+
+
+
 https://code.visualstudio.com/api/references/theme-color
