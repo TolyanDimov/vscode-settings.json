@@ -1,1 +1,370 @@
+{
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.theme": "classic",
+    "material-icon-theme.hidesExplorerArrows": false,
+    "material-icon-theme.folders.color": "#6e7681",
+    "editor.fontSize": 13,
+    "editor.fontWeight": 400,
+    "editor.lineHeight": 23,
+    "editor.fontFamily": "\"Fira Code iScript\", \"Fira Code\", \"JetBrains Mono\", monospace",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "keyword",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "storage",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "variable.language",
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "smooth",
+    "editor.multiCursorModifier": "alt",
+    "editor.insertSpaces": true,
+    "editor.wordWrap": "off",
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": true,
+    "editor.minimap.maxColumn": 60,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.renderLineHighlight": "all",
+    "editor.autoIndent": "full",
+    "extensions.ignoreRecommendations": false,
+    "breadcrumbs.enabled": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "files.exclude": {
+        "**/.build": true,
+        "**/.git": true,
+        "**/.err": true,
+        "**/.rec": true,
+        "**/.log": true,
+        "**/.evt": true,
+        "**/.DS_Store": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        "**/__MACOSX": true,
+        "**/*._*": true,
+        "**/node_modules/**": true,
+        "**/out/**": true,
+        "**/issues/**": true,
+        "**/*.map": true,
+        "**/*.tds": true,
+        "**/*.tmp": true,
+        "**/*.ico": true,
+        "**/*.{res,RES}": true,
+        "**/*.rc": true,
+        "**/*.bak?": true,
+        "**/*.dcu": true,
+        "**/*.bpl": true,
+        "**/*.rsb": true,
+        "**/*.scssc": true,
+        "**/*.cssc": true,
+        "**/db.json": true,
+        "**/*.min.*": true,
+        "**/*.log.*": true,
+        "**/dist": true,
+        "**/tmp": true,
+        "**/cache": true,
+        "**/test_assets": true,
+        "**/public": true,
+        "**/.deploy_git": true,
+        "**/rethinkdb_data": true,
+        "**/lcov-report": true,
+        "**/*.dfm": {
+            "when": "$(basename).pas"
+        },
+        "**/*.fmx": {
+            "when": "$(basename).pas"
+        },
+        "**/*.~dfm": {
+            "when": "$(basename).pas"
+        },
+        "**/*.ddp": {
+            "when": "$(basename).pas"
+        },
+        "**/*.~ddp": {
+            "when": "$(basename).pas"
+        },
+        "**/*.~pas": {
+            "when": "$(basename).pas"
+        },
+        "**/*.exe": {
+            "when": "$(basename).dpr"
+        },
+        "**/*.used": {
+            "when": "$(basename).dpr"
+        },
+        "**/*.stat": {
+            "when": "$(basename).dpr"
+        },
+        "**/*.identcache": {
+            "when": "$(basename).dpr"
+        },
+        "**/*.dcr": {
+            "when": "$(basename).pas"
+        },
+        "**/*.dof": {
+            "when": "$(basename).dpk"
+        },
+        "**/__history/**": true,
+        "**/__recovery/**": true,
+        "**/Win32/**": true,
+        "**/*.class": true,
+        "**/*.dll": true,
+        "**/*.jar": true,
+        "**/*.local": true,
+        "**/*.fbl8": {
+            "when": "$(basename).fbp8"
+        },
+        "**/*.fb8lck": {
+            "when": "$(basename).fbp8"
+        },
+        "**/*.fbpbrk": {
+            "when": "$(basename).fbp8"
+        },
+        "**/*.fbpInf": {
+            "when": "$(basename).fbp8"
+        }
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        ".build/**": true,
+        "out*/**": true,
+        "i18n/**": true,
+        "extensions/**/out/**": true,
+        "*.min.js": true
+    },
+    "files.associations": {
+        "*.atml": "html",
+        "*.htm": "html",
+        "*.fish": "powershell",
+        "*.vue": "vue",
+        "*.js": "javascript",
+        "*.mdx": "markdown",
+        ".babelrc": "json",
+        ".huskyrc": "json",
+        ".sequelizerc": "javascript",
+        ".stylelintrc": "json",
+        ".prettierrc": "json",
+        "*.tsx": "typescriptreact",
+        ".env.*": "dotenv",
+        "*.tokens": "json",
+        "*.tree": "json",
+        "deque": "cpp",
+        "list": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        ".james": "json",
+        "*.dproj": "xml",
+        "*.groupproj": "xml",
+        "*.dof": "ini",
+        "*.cfg": "ini",
+        "*.psc": "pascal",
+        "*.inc": "pascal"
+    },
+    "workbench.editor.enablePreview": false,
+    "[handlebars]": {
+        "editor.formatOnSave": false
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.wordWrap": "on"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[pascal]": {
+        "files.encoding": "windows1252"
+    },
+    "[Log]": {
+        "editor.minimap.enabled": false,
+        "editor.fontLigatures": false
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[plaintext]": {
+        "editor.fontLigatures": false
+    },
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "\"Fira Code iScript\", \"Fira Code\", \"JetBrains Mono\", monospace",
+    "terminal.integrated.lineHeight": 1.1,
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.scrollback": 8000,
+    "terminal.integrated.enableBell": true,
+    "terminal.integrated.showExitAlert": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "emmet.showAbbreviationSuggestions": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "screencastMode.onlyKeyboardShortcuts": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.dragAndDrop": false,
+    "editor.folding": true,
+    "editor.renderIndentGuides": true,
+    "editor.smoothScrolling": true,
+    "editor.suggest.localityBonus": true,
+    "editor.tabCompletion": "on",
+    "workbench.editor.closeOnFileDelete": false,
+    "workbench.editor.revealIfOpen": true,
+    "workbench.list.smoothScrolling": true,
+    "workbench.editor.showTabs": true,
+    "workbench.editor.closeEmptyGroups": true,
+    "workbench.sideBar.location": "left",
+    "search.collapseResults": "auto",
+    "search.quickOpen.includeSymbols": false,
+    "search.showLineNumbers": true,
+    "search.smartCase": true,
+    "search.useIgnoreFiles": true,
+    "search.followSymlinks": true,
+    "scss.validate": true,
+    "css.validate": true,
+    "php.validate.enable": false,
+    "php.suggest.basic": false,
+    "workbench.commandPalette.preserveInput": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.scrollToSwitchTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.list.horizontalScrolling": true,
+    "workbench.list.keyboardNavigation": "filter",
+    "workbench.statusBar.visible": true,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "window.restoreFullscreen": true,
+    "window.restoreWindows": "all",
+    "window.newWindowDimensions": "maximized",
+    "window.titleBarStyle": "custom",
+    "files.trimTrailingWhitespace": true,
+    "editor.mouseWheelScrollSensitivity": 5,
+    "workbench.tips.enabled": true,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.renderControlCharacters": true,
+    "editor.scrollBeyondLastLine": false,
+    "editor.showFoldingControls": "always",
+    "editor.snippetSuggestions": "top",
+    "editor.unfoldOnClickAfterEndOfLine": true,
+    "files.insertFinalNewline": true,
+    "files.simpleDialog.enable": true,
+    "debug.inlineValues": true,
+    "editor.foldingStrategy": "indentation",
+    "typescript.tsserver.log": "off",
+    "javascript.suggest.autoImports": true,
+    "typescript.suggest.autoImports": true,
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "gotoAndPeek",
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "javascript.preferences.importModuleSpecifier": "relative",
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.suggest.completeFunctionCalls": true,
+    "editor.linkedEditing": true,
+    "html.format.templating": true,
+    "git.allowForcePush": true,
+    "git.fetchOnPull": true,
+    "git.inputValidationSubjectLength": 72,
+    "merge-conflict.diffViewPosition": "Below",
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.referencesCodeLens.showOnAllFunctions": true,
+    "git.suggestSmartCommit": false,
+    "debug.allowBreakpointsEverywhere": true,
+    "markdown.preview.markEditorSelection": true,
+    "window.title": "${dirty} ${activeEditorShort}${separator}${rootName}",
+    "debug.showInStatusBar": "always",
+    "zenMode.centerLayout": true,
+    "editor.matchBrackets": "always",
+    "debug.toolBarLocation": "docked",
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.implementationsCodeLens.enabled": true,
+    "window.openFilesInNewWindow": "off",
+    "files.hotExit": "onExitAndWindowClose",
+    "references.preferredLocation": "view",
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "typescript.reportStyleChecksAsWarnings": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.fullScreen": false,
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "update.mode": "none",
+    "update.showReleaseNotes": true,
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": true,
+    "workbench.enableExperiments": false,
+    "notebook.experimental.useMarkdownRenderer": false,
+    "terminal.integrated.experimentalLinkProvider": false,
+    "js/ts.implicitProjectConfig.experimentalDecorators": false,
+    "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+    "workbench.activityBar.visible": true,
+    "workbench.colorCustomizations": {
+        "editorWhitespace.foreground": "#161b22",
+    },
+    "workbench.editor.centeredLayoutAutoResize": false,
+    "workbench.list.automaticKeyboardNavigation": false,
+    "explorer.enableDragAndDrop": false,
+    "editor.lineNumbers": "on",
+    "editor.mouseWheelZoom": false,
+    "editor.trimAutoWhitespace": true,
+    "diffEditor.renderSideBySide": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "zenMode.silentNotifications": false,
+    "editor.parameterHints.enabled": false,
+    //END
+}
 
