@@ -1,369 +1,427 @@
+/*
+ @danger: regions General
+ @danger: regions Extension
+ * 01. Russian Language Pack  => https://github.com/Microsoft/vscode-loc
+ * 02. GitHub theme           => https://github.com/primer/github-vscode-theme
+ * 03. Material icon theme    => https://github.com/PKief/vscode-material-icon-theme
+ * 04. Prettier               => https://github.com/prettier/prettier-vscode
+ * 05. Better comments        => https://github.com/aaron-bond/better-comments
+ * 06. Region folding         => https://github.com/maptz/Maptz.VSCode.Extensions.customfolding
+ * 07. PostCSS sorting        => https://github.com/mrmlnc/vscode-postcss-sorting
+ * 08. PHP Intelephense       => https://github.com/bmewburn/vscode-intelephense
+ * 09. PHP Debug              => https://github.com/xdebug/vscode-php-debug
+ * 10. Docker                 => https://github.com/microsoft/vscode-docker
+ * 11. ESLint                 => https://github.com/Microsoft/vscode-eslint
+ * 12. Code Runner            => https://github.com/formulahendry/vscode-code-runner
+ * 13. Debugger for Chrome    => https://github.com/Microsoft/vscode-chrome-debug
+ * 14. Python                 => https://github.com/Microsoft/vscode-python
+ * 15. YAML                   => https://github.com/redhat-developer/vscode-yaml
+ * 16. Live Server            => https://github.com/ritwickdey/vscode-live-server
+ * 17. Vetur                  => https://github.com/vuejs/vetur
+ * 18. Laravel Blade Snippets => https://github.com/onecentlin/laravel-blade-snippets-vscode
+ * 19. Laravel Artisan        => https://github.com/TheColorRed/vscode-laravel-artisan
+ * 20. DotENV                 => https://github.com/mikestead/vscode-dotenv
+ * 21. Image preview          => https://github.com/kisstkondoros/gutter-preview
+ * 22. Code Spell Checker     => https://github.com/streetsidesoftware/vscode-spell-checker
+ * 23. Yandex Translate       => https://github.com/airstep/vscode-ext-yandex-translate
+ @danger: regions Other
+ @info: Note
+ * Отчистить settings.json от комментариев: \/\*[\s\S]*?\*\/|([^:]|^)\/\/.*$ ==> (SHIFT + ALT + F) ==> $^\n
+ */
+
 {
-    "workbench.colorTheme": "GitHub Dark Default",
-    "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.folders.theme": "classic",
-    "material-icon-theme.hidesExplorerArrows": false,
-    "material-icon-theme.folders.color": "#6e7681",
-    "editor.fontSize": 13,
-    "editor.fontWeight": 400,
-    "editor.lineHeight": 23,
-    "editor.fontFamily": "\"Fira Code iScript\", \"Fira Code\", \"JetBrains Mono\", monospace",
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": "keyword",
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "storage",
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "comment",
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "variable.language",
-                "settings": {
-                    "fontStyle": ""
-                }
-            }
-        ]
+    // #region BEGIN__[ Workbench ] ----------------------- General #//
+    // @danger: Themes
+    "workbench.colorTheme": "GitHub Dark Default",          // Тема.
+    "workbench.colorCustomizations": {                      // Переопределение цвета темы GitHub Dark Default.
+        "editorWhitespace.foreground": "#21262d",         // цвет симолы пробела.
+        "editorRuler.foreground": "#161b22",              // цвет вертикальные линии.
+        "editorIndentGuide.background:": "#161b22",         // цвет направляющие отступы.
+        "editorIndentGuide.activeBackground": "#2d465d",  // цвет направляющие отступы (hover).
     },
-    "editor.tabSize": 2,
-    "editor.renderWhitespace": "boundary",
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 500,
-    "editor.cursorStyle": "block",
-    "editor.cursorBlinking": "smooth",
-    "editor.multiCursorModifier": "alt",
-    "editor.insertSpaces": true,
-    "editor.wordWrap": "off",
-    "editor.suggestSelection": "recentlyUsedByPrefix",
+    // @danger: Icons
+    "workbench.iconTheme": "material-icon-theme",           // Вид иконок в проводнике.
+    "material-icon-theme.folders.theme": "classic",         // Тип иконки для папок в проводнике.
+    // @danger: .ETC
+    "workbench.editor.showTabs": true,                      // Отображать/скрыть открытые вкладки редактора.
+    "workbench.editor.showIcons": true,                     // Отображать/скрыть иконки в открытой вкладке редактора.
+    "workbench.list.smoothScrolling": true,                 // Плавная прокрутка в проводнике.
+    "workbench.list.horizontalScrolling": true,             // Горизонтальный скрол в проводнике.
+    "workbench.commandPalette.preserveInput": true,         // Показать последний ввод в палитру команд при следующим открытии.
+    "workbench.editor.enablePreview": false,                // Открытые вкладки в режиме просмотра не закрываются.
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.revealIfOpen": true,
+    // #endregion END_[Workbench] - General #//
+
+    // #region BEGIN__[Editor] ---------------------------- General #//
+    // @danger: Fonts
+    "editor.fontFamily": "'Consolas ligaturized v2', 'Fira Code iScript', 'Fira Code', Consolas, monospace",
+    "editor.fontLigatures": true,                           // Отображать/скрыть лигатуры <=>.
+    "editor.fontSize": 13,                                  // Размер шрифта.
+    "editor.fontWeight": 400,                               // Вес шрифта.
+    "editor.lineHeight": 20,                                // Высота строки.
+    "editor.letterSpacing": 0.2,                            // Межсимвольное расстояние.
+    // @danger: Cursor and Mouse
+    "editor.cursorBlinking": "smooth",                      // Стиль анимации курсора.
+    "editor.cursorSmoothCaretAnimation": true,              // Вкл/Выкл плавная анимация курсора.
+    "editor.cursorStyle": "block",                          // Стиль курсора.
+    "editor.cursorSurroundingLines": 5,                     // Количеством видимых начальных и конечных строк scrollOff/scrollOffset.
+    "editor.mouseWheelScrollSensitivity": 5,                // Множитель скрола мыши deltaX/deltaY.
+    "editor.mouseWheelZoom": false,                         // Маштаб шрифта CTRL + Колесо мыши.
+    "editor.smoothScrolling": true,                        // Плавная прокрутка в редакторе.
+    // @danger: Word Wrap and Vertical Rulers
+    "editor.wordWrap": "off",                               // Перенос строк on/off или wordWrapColumn/bounded.
+    "editor.wordWrapColumn": 80,                            // Управление переносм, для editor.wordWrap:wordWrapColumn/bounded.
+    "editor.rulers": [60, 80, 120],                         // Вертикальные линии.
+    // @danger: Minimap
+    "editor.minimap.enabled": true,                         // Отображать/скрыть миникарту.
+    "editor.minimap.maxColumn": 100,                        // Ширина миникарты.
+    "editor.minimap.renderCharacters": false,               // Отображать содержимое символоми/блоками.
+    "editor.minimap.scale": 1,                              // Масштаб содержимого внутри 1-3.
+    "editor.minimap.showSlider": "always",                  // Отображать/скрыть локацию экрана на миникарте.
+    "editor.minimap.side": "right",                         // Отображать миникарту слева/справа.
+    "editor.minimap.size": "proportional",                  // Размером содержимого.
+    // @danger: Tabs and Spaces.
+    "editor.renderWhitespace": "boundary",                  // Отображать/скрыть символы пробела.
+    "editor.insertSpaces": true,                            // Отображать символы в табуляции иначе табы.
+    "editor.tabSize": 4,                                    // Размер символов табуляции.
+    "editor.detectIndentation": false,                      // Автоопределение размера табуляции.
+    "editor.renderIndentGuides": true,                      // Отображать/скрыть направляющие отступы табуляции.
+    // @danger: Formatting
+    "editor.defaultFormatter": "esbenp.prettier-vscode",    // Форматировщик по умолчанию. [Prettier] Expansion.
+    "editor.formatOnType": true,                            // Автоформатирование кода при вводе.
+    "editor.formatOnPaste": true,                           // Автоформатирование кода при копипасте.
+    "editor.formatOnSave": false,                           // Автоформатирование кода при сохранении.
+    "editor.trimAutoWhitespace": true,                      // Удалять пробелы в конце сторк при автозаполнении.
+    "files.trimTrailingWhitespace": true,                   // Удалять пробелы в конце сторк при сохранении.
+    // @danger: .ETC
+    "editor.renderControlCharacters": true,                 // Отображать спецсимволы (https://github.com/microsoft/vscode/issues/116939).
+    "editor.scrollBeyondLastLine": false,                   // Прокрутка до последний строки.
+    "editor.parameterHints.enabled": false,                 // Всплывающее окно, в котором отображается документация по параметрам и информация о типе по мере ввода.
+    // #endregion END_[Editor] - General #//
+
+    // #region BEGIN__[Terminal] -------------------------- General #//
+    // @danger: Fonts
+    "terminal.integrated.fontFamily": "Consolas ligaturized v2, monospace",
+    "terminal.integrated.fontSize": 12,                     // Размер шрифта.
+    "terminal.integrated.fontWeight": "normal",             // Вес шрифта.
+    "terminal.integrated.fontWeightBold": "bold",           // Вес шрифта выделения.
+    "terminal.integrated.lineHeight": 1,                    // Высота строки.
+    "terminal.integrated.letterSpacing": 1,                 // Межсимвольное расстояние.
+    // @danger: .ETC
+    "terminal.integrated.enableBell": true,                 // Вкл/выкл звонок терминала, отображается рядом с именем терминала.
+    "terminal.integrated.scrollback": 8000,                 // Количество строк в буфере терминала.
+    // #endregion END_[Terminal] - General #//
+
+    // #region BEGIN__[Telemetry and Update] -------------- General #//
+    // @danger: null
+    "telemetry.enableCrashReporter": false,                 // Отправлять отчеты о сбоях в Microsoft.
+    "telemetry.enableTelemetry": false,                     // Отправлять/нет данные в Microsoft.
+    "update.enableWindowsBackgroundUpdates": false,         // Загружать новые версий VS Code в фоновом режиме в Windows.
+    "update.mode": "manual",                                // Обновление редакторв только в ручную.
+    "update.showReleaseNotes": true,                        // Отображать примечания к выпуску после обновления.
+    "extensions.autoCheckUpdates": false,                   // Проверка расширений на новые версии.
+    "extensions.autoUpdate": false,                         // Обновление расширений только в ручную.
+    // #endregion END_[Telemetry and Update] - General #//
+
+    // #region BEGIN__[Debug] -------------- General #//
+    // @danger: null
+    "debug.allowBreakpointsEverywhere": true,               // Разрешить установку точек останова в любом файле.
+    "debug.showInStatusBar": "always",                      // Всегда ображать отладку в строке состояния.
+    "debug.toolBarLocation": "docked",                      // Расположение панели инструментов отладки.
+    // #endregion END_[Telemetry and Update] - General #//
+
+    // #region BEGIN__[Prettier] -------------------------- 04. Extension #//
+    // @danger: https://github.com/prettier/prettier-vscode
+    "prettier.useEditorConfig": false,
+    "prettier.arrowParens": "avoid",
+    "prettier.bracketSpacing": true,
+    "prettier.endOfLine": "lf",
+    "prettier.htmlWhitespaceSensitivity": "ignore",
+    "prettier.insertPragma": false,
+    "prettier.jsxBracketSameLine": true,
+    "prettier.jsxSingleQuote": false,
+    "prettier.printWidth": 100,
+    "prettier.proseWrap": "preserve",
+    "prettier.quoteProps": "preserve",
+    "prettier.requirePragma": false,
     "prettier.semi": false,
     "prettier.singleQuote": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.fontLigatures": true,
-    "editor.minimap.enabled": true,
-    "editor.minimap.maxColumn": 60,
-    "editor.minimap.renderCharacters": false,
-    "editor.minimap.showSlider": "always",
-    "editor.renderLineHighlight": "all",
-    "editor.autoIndent": "full",
-    "extensions.ignoreRecommendations": false,
-    "breadcrumbs.enabled": true,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "files.exclude": {
-        "**/.build": true,
-        "**/.git": true,
-        "**/.err": true,
-        "**/.rec": true,
-        "**/.log": true,
-        "**/.evt": true,
-        "**/.DS_Store": true,
-        "**/.hg": true,
-        "**/.svn": true,
-        "**/CVS": true,
-        "**/__MACOSX": true,
-        "**/*._*": true,
-        "**/node_modules/**": true,
-        "**/out/**": true,
-        "**/issues/**": true,
-        "**/*.map": true,
-        "**/*.tds": true,
-        "**/*.tmp": true,
-        "**/*.ico": true,
-        "**/*.{res,RES}": true,
-        "**/*.rc": true,
-        "**/*.bak?": true,
-        "**/*.dcu": true,
-        "**/*.bpl": true,
-        "**/*.rsb": true,
-        "**/*.scssc": true,
-        "**/*.cssc": true,
-        "**/db.json": true,
-        "**/*.min.*": true,
-        "**/*.log.*": true,
-        "**/dist": true,
-        "**/tmp": true,
-        "**/cache": true,
-        "**/test_assets": true,
-        "**/public": true,
-        "**/.deploy_git": true,
-        "**/rethinkdb_data": true,
-        "**/lcov-report": true,
-        "**/*.dfm": {
-            "when": "$(basename).pas"
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "es5",
+    "prettier.useTabs": false,
+    "prettier.vueIndentScriptAndStyle": false,
+    "prettier.embeddedLanguageFormatting": "auto",
+    // #endregion END_[Prettier] - Extension #//
+
+    // #region BEGIN__[Better Comments] ------------------- 05. Extension #//
+    // @danger: https://github.com/aaron-bond/better-comments
+    "better-comments.multilineComments": true,              // Оформлять многострочные комментарии или нет.
+    "better-comments.highlightPlainText": true,             // Оформлять .TXT документы или нет.
+    "better-comments.tags": [
+        {
+            "tag": "@info",                                 // @info - Без памяти разум туп.
+            "color": "#79c0ff",                             // Цвет шрифта.
+            "strikethrough": false,                         // Зачеркивать шрифта.
+            "underline": false,                             // Подчеркивать шрифт.
+            "backgroundColor": "#388bfd33",                 // Цвет подложки шрифта.
+            "bold": false,                                  // Вес шрифта.
+            "italic": true                                  // Шрифт под наклоном.
         },
-        "**/*.fmx": {
-            "when": "$(basename).pas"
+        {
+            "tag": "@danger",                               // @danger - Всё идёт по плану.
+            "color": "#56d364",                             // Цвет шрифта.
+            "strikethrough": false,                         // Зачеркивать шрифта.
+            "underline": false,                             // Подчеркивать шрифт.
+            "backgroundColor": "#2ea0431a",                 // Цвет подложки шрифта.
+            "bold": false,                                  // Вес шрифта.
+            "italic": true                                  // Шрифт под наклоном.
         },
-        "**/*.~dfm": {
-            "when": "$(basename).pas"
+        {
+            "tag": "@success",                              // @success - Предупреждён значит вооружён.
+            "color": "#e3b341",                             // Цвет шрифта.
+            "strikethrough": false,                         // Зачеркивать шрифта.
+            "underline": false,                             // Подчеркивать шрифт.
+            "backgroundColor": "#bb80091a",                 // Цвет подложки шрифта.
+            "bold": false,                                  // Вес шрифта.
+            "italic": true                                  // Шрифт под наклоном.
         },
-        "**/*.ddp": {
-            "when": "$(basename).pas"
+        {
+            "tag": "@warning",                              // @warning - Опасайся бед, пока их нет.
+            "color": "#ff7b72",                             // Цвет шрифта.
+            "strikethrough": false,                         // Зачеркивать шрифта.
+            "underline": false,                             // Подчеркивать шрифт.
+            "backgroundColor": "#f851491a",                 // Цвет подложки шрифта.
+            "bold": false,                                  // Вес шрифта.
+            "italic": true                                  // Шрифт под наклоном.
         },
-        "**/*.~ddp": {
-            "when": "$(basename).pas"
+        {
+            "tag": "@wtf",                                  // @wtf - А сегодня в завтрашний день не все могут смотреть. Вернее смотреть могут не только лишь все, мало кто может это делать.
+            "color": "#30363d",                             // Цвет шрифта
+            "strikethrough": false,                         // Зачеркивать шрифта.
+            "underline": false,                             // Подчеркивать шрифт.
+            "backgroundColor": "transparent",               // Цвет подложки шрифта.
+            "bold": false,                                  // Вес шрифта.
+            "italic": true                                  // Шрифт под наклоном.
         },
-        "**/*.~pas": {
-            "when": "$(basename).pas"
+        {
+            "tag": "#region",                               // Оформление BEGIN.
+            "color": "#e3b341",                             // Цвет шрифта.
+            "strikethrough": false,                         // Зачеркивать шрифта.
+            "underline": false,                             // Подчеркивать шрифт.
+            "backgroundColor": "8a50ff",                    // Цвет подложки шрифта.
+            "bold": true,                                   // Вес шрифта.
+            "italic": false                                 // Шрифт под наклоном.
         },
-        "**/*.exe": {
-            "when": "$(basename).dpr"
+        {
+            "tag": "#endregion",                            // Оформление END.
+            "color": "#e3b341",                             // Цвет шрифта.
+            "strikethrough": false,                         // Зачеркивать шрифта.
+            "underline": false,                             // Подчеркивать шрифт.
+            "backgroundColor": "8a50ff",                    // Цвет подложки шрифта.
+            "bold": true,                                   // Вес шрифта.
+            "italic": false                                 // Шрифт под наклоном.
         },
-        "**/*.used": {
-            "when": "$(basename).dpr"
-        },
-        "**/*.stat": {
-            "when": "$(basename).dpr"
-        },
-        "**/*.identcache": {
-            "when": "$(basename).dpr"
-        },
-        "**/*.dcr": {
-            "when": "$(basename).pas"
-        },
-        "**/*.dof": {
-            "when": "$(basename).dpk"
-        },
-        "**/__history/**": true,
-        "**/__recovery/**": true,
-        "**/Win32/**": true,
-        "**/*.class": true,
-        "**/*.dll": true,
-        "**/*.jar": true,
-        "**/*.local": true,
-        "**/*.fbl8": {
-            "when": "$(basename).fbp8"
-        },
-        "**/*.fb8lck": {
-            "when": "$(basename).fbp8"
-        },
-        "**/*.fbpbrk": {
-            "when": "$(basename).fbp8"
-        },
-        "**/*.fbpInf": {
-            "when": "$(basename).fbp8"
-        }
-    },
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true,
-        ".build/**": true,
-        "out*/**": true,
-        "i18n/**": true,
-        "extensions/**/out/**": true,
-        "*.min.js": true
-    },
-    "files.associations": {
-        "*.atml": "html",
-        "*.htm": "html",
-        "*.fish": "powershell",
-        "*.vue": "vue",
-        "*.js": "javascript",
-        "*.mdx": "markdown",
-        ".babelrc": "json",
-        ".huskyrc": "json",
-        ".sequelizerc": "javascript",
-        ".stylelintrc": "json",
-        ".prettierrc": "json",
-        "*.tsx": "typescriptreact",
-        ".env.*": "dotenv",
-        "*.tokens": "json",
-        "*.tree": "json",
-        "deque": "cpp",
-        "list": "cpp",
-        "vector": "cpp",
-        "xstring": "cpp",
-        ".james": "json",
-        "*.dproj": "xml",
-        "*.groupproj": "xml",
-        "*.dof": "ini",
-        "*.cfg": "ini",
-        "*.psc": "pascal",
-        "*.inc": "pascal"
-    },
-    "workbench.editor.enablePreview": false,
-    "[handlebars]": {
-        "editor.formatOnSave": false
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.wordWrap": "on"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[pascal]": {
-        "files.encoding": "windows1252"
-    },
-    "[Log]": {
-        "editor.minimap.enabled": false,
-        "editor.fontLigatures": false
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[plaintext]": {
-        "editor.fontLigatures": false
-    },
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.fontFamily": "\"Fira Code iScript\", \"Fira Code\", \"JetBrains Mono\", monospace",
-    "terminal.integrated.lineHeight": 1.1,
-    "terminal.integrated.fontSize": 13,
-    "terminal.integrated.scrollback": 8000,
-    "terminal.integrated.enableBell": true,
-    "terminal.integrated.showExitAlert": false,
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
-    "editor.rulers": [
-        80,
-        120
     ],
-    "emmet.showAbbreviationSuggestions": true,
-    "emmet.showSuggestionsAsSnippets": true,
-    "emmet.triggerExpansionOnTab": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "screencastMode.onlyKeyboardShortcuts": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.dragAndDrop": false,
-    "editor.folding": true,
-    "editor.renderIndentGuides": true,
-    "editor.smoothScrolling": true,
-    "editor.suggest.localityBonus": true,
-    "editor.tabCompletion": "on",
-    "workbench.editor.closeOnFileDelete": false,
-    "workbench.editor.revealIfOpen": true,
-    "workbench.list.smoothScrolling": true,
-    "workbench.editor.showTabs": true,
-    "workbench.editor.closeEmptyGroups": true,
-    "workbench.sideBar.location": "left",
-    "search.collapseResults": "auto",
-    "search.quickOpen.includeSymbols": false,
-    "search.showLineNumbers": true,
-    "search.smartCase": true,
-    "search.useIgnoreFiles": true,
-    "search.followSymlinks": true,
-    "scss.validate": true,
-    "css.validate": true,
-    "php.validate.enable": false,
-    "php.suggest.basic": false,
-    "workbench.commandPalette.preserveInput": true,
-    "workbench.editor.highlightModifiedTabs": true,
-    "workbench.editor.scrollToSwitchTabs": true,
-    "workbench.editor.tabSizing": "shrink",
-    "workbench.list.horizontalScrolling": true,
-    "workbench.list.keyboardNavigation": "filter",
-    "workbench.statusBar.visible": true,
-    "workbench.view.alwaysShowHeaderActions": true,
-    "editor.cursorSmoothCaretAnimation": true,
-    "window.restoreFullscreen": true,
-    "window.restoreWindows": "all",
-    "window.newWindowDimensions": "maximized",
-    "window.titleBarStyle": "custom",
-    "files.trimTrailingWhitespace": true,
-    "editor.mouseWheelScrollSensitivity": 5,
-    "workbench.tips.enabled": true,
-    "editor.hideCursorInOverviewRuler": true,
-    "editor.renderControlCharacters": true,
-    "editor.scrollBeyondLastLine": false,
-    "editor.showFoldingControls": "always",
-    "editor.snippetSuggestions": "top",
-    "editor.unfoldOnClickAfterEndOfLine": true,
-    "files.insertFinalNewline": true,
-    "files.simpleDialog.enable": true,
-    "debug.inlineValues": true,
-    "editor.foldingStrategy": "indentation",
-    "typescript.tsserver.log": "off",
-    "javascript.suggest.autoImports": true,
-    "typescript.suggest.autoImports": true,
-    "security.workspace.trust.untrustedFiles": "newWindow",
-    "editor.gotoLocation.multipleDeclarations": "goto",
-    "editor.gotoLocation.multipleDefinitions": "goto",
-    "editor.gotoLocation.multipleImplementations": "goto",
-    "editor.gotoLocation.multipleReferences": "goto",
-    "editor.gotoLocation.multipleTypeDefinitions": "gotoAndPeek",
-    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
-    "javascript.preferences.importModuleSpecifier": "relative",
-    "javascript.preferences.quoteStyle": "single",
-    "javascript.suggest.completeFunctionCalls": true,
-    "editor.linkedEditing": true,
-    "html.format.templating": true,
-    "git.allowForcePush": true,
-    "git.fetchOnPull": true,
-    "git.inputValidationSubjectLength": 72,
-    "merge-conflict.diffViewPosition": "Below",
-    "typescript.preferences.quoteStyle": "single",
-    "typescript.referencesCodeLens.showOnAllFunctions": true,
-    "git.suggestSmartCommit": false,
-    "debug.allowBreakpointsEverywhere": true,
-    "markdown.preview.markEditorSelection": true,
-    "window.title": "${dirty} ${activeEditorShort}${separator}${rootName}",
-    "debug.showInStatusBar": "always",
-    "zenMode.centerLayout": true,
-    "editor.matchBrackets": "always",
-    "debug.toolBarLocation": "docked",
-    "typescript.referencesCodeLens.enabled": true,
-    "typescript.implementationsCodeLens.enabled": true,
-    "window.openFilesInNewWindow": "off",
-    "files.hotExit": "onExitAndWindowClose",
-    "references.preferredLocation": "view",
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-    "git.autofetch": true,
-    "typescript.reportStyleChecksAsWarnings": false,
-    "zenMode.hideStatusBar": false,
-    "zenMode.fullScreen": false,
-    "typescript.updateImportsOnFileMove.enabled": "never",
-    "update.mode": "none",
-    "update.showReleaseNotes": true,
-    "extensions.autoCheckUpdates": false,
-    "extensions.autoUpdate": true,
-    "workbench.enableExperiments": false,
-    "notebook.experimental.useMarkdownRenderer": false,
-    "terminal.integrated.experimentalLinkProvider": false,
-    "js/ts.implicitProjectConfig.experimentalDecorators": false,
-    "typescript.tsserver.experimental.enableProjectDiagnostics": false,
-    "workbench.activityBar.visible": true,
-    "workbench.colorCustomizations": {
-        "editorWhitespace.foreground": "#161b22",
-    },
-    "workbench.editor.centeredLayoutAutoResize": false,
-    "workbench.list.automaticKeyboardNavigation": false,
-    "explorer.enableDragAndDrop": false,
-    "editor.lineNumbers": "on",
-    "editor.mouseWheelZoom": false,
-    "editor.trimAutoWhitespace": true,
-    "diffEditor.renderSideBySide": true,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-    "zenMode.silentNotifications": false,
-    "editor.parameterHints.enabled": false,
-    //END
+    // #endregion END_[Better Comments] - 05. Extension #//
+
+    // #region BEGIN__[Region folding] -------------------- 06. Extension #//
+    // @danger: null
+    // #endregion END_[Region folding] - 06. Extension #//
+
+    // #region BEGIN__[PostCSS sorting] ------------------- 07. Extension #//
+    // @danger: null
+    // #endregion END_[PostCSS sorting] - 07. Extension #//
+
+    // #region BEGIN__[PHP Intelephense] ------------------ 08. Extension #//
+    // @danger: null
+    // #endregion END_[PHP Intelephense] - 08. Extension #//
+
+    // #region BEGIN__[PHP Debug] ------------------------- 09. Extension #//
+    // @danger: null
+    // #endregion END_[PHP Debug] - 09. Extension #//
+
+    // #region BEGIN__[Docker] ---------------------------- 10. Extension #//
+    // @danger: null
+    // #endregion END_[Docker] - 10. Extension #//
+
+    // #region BEGIN__[ESLint] ---------------------------- 11. Extension #//
+    // @danger: null
+    // #endregion END_[ESLint] - 11. Extension #//
+
+    // #region BEGIN__[Code Runner] ----------------------- 12. Extension #//
+    // @danger: null
+    // #endregion END_[Code Runner] - 12. Extension #//
+
+    // #region BEGIN__[Debugger for Chrome] --------------- 13. Extension #//
+    // @danger: null
+    // #endregion END_[Debugger for Chrome] - 13. Extension #//
+
+    // #region BEGIN__[Python] ---------------------------- 14. Extension #//
+    // @danger: null
+    // #endregion END_[Python] - 14. Extension #//
+
+    // #region BEGIN__[YAML] ------------------------------ 15. Extension #//
+    // @danger: null
+    // #endregion END_[YAML] - 15. Extension #//
+
+    // #region BEGIN__[Live Server] ----------------------- 16. Extension #//
+    // @danger: null
+    // #endregion END_[Live Server] - 16. Extension #//
+
+    // #region BEGIN__[Vetur] ----------------------------- 17. Extension #//
+    // @danger: null
+    // #endregion END_[Vetur] - 17. Extension #//
+
+    // #region BEGIN__[Laravel Blade Snippets] ------------ 18. Extension #//
+    // @danger: null
+    // #endregion END_[Laravel Blade Snippets] - 18. Extension #//
+
+    // #region BEGIN__[Laravel Artisan] ------------------- 19. Extension #//
+    // @danger: null
+    // #endregion END_[Laravel Artisan] - 19. Extension #//
+
+    // @wtf BEGIN__[DotENV] ---------------------------- 20. Extension #//
+    // @wtf BEGIN__[Image preview] --------------------- 21. Extension #//
+
+    // #region BEGIN__[Code Spell Checker] ---------------- 22. Extension #//
+    // @danger: https://github.com/streetsidesoftware/vscode-spell-checker
+    "cSpell.language": "en,ru",                             // Локальный язык при проверке орфографии.
+    "cSpell.maxNumberOfProblems": 50,                       // Контролирует количество орфографических ошибок.
+    "cSpell.numSuggestions": 8,                             // Управляет количеством отображаемых предложений.
+    "cSpell.minWordLength": 4,                              // Минимальная длина слова перед проверкой его по словарю.
+    "cSpell.enabledLanguageIds": [                          // Расширения файлов для проверки орфографии.
+        "json",
+        "jsonc",
+        "yml",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "markdown",
+        "php",
+        "plaintext",
+        "csharp",
+        "go",
+    ],
+    "cSpell.enabled": true,                                 // Вкл/Выкл проверка орфографии.
+    "cSpell.showStatus": true,                              // Отображение статуса проверки орфографии в строке состояния.
+    "cSpell.words": [],                                     // Слова для словаря рабочей области.
+    "cSpell.allowCompoundWords": false,                     // Вкл/Выкл составных слов, пример 'errormessage'.
+    "cSpell.ignoreWords": ["behaviour"],                    // Слова, которые следует игнорировать и не предлагать.
+    "cSpell.userWords": [                                   // Слова для словаря пользовательских настройкек.
+        "Interesse",
+        "Palavras",
+        "Título",
+        "autores",
+        "chave",
+        "cifrado",
+        "livros",
+        "numero",
+        "receber",
+        "serie",
+        "Devtools",
+        "Mentoria",
+        "Reactotron",
+        "Rocketseat",
+        "adonisjs",
+        "allowed",
+        "allowed envs",
+        "bootcamp",
+        "bootcamps",
+        "cerbero",
+        "changelogs",
+        "desaturate",
+        "envs",
+        "esnext",
+        "craco",
+        "devtools",
+        "ecommerce",
+        "firestore",
+        "flexbox",
+        "fontawesome",
+        "formik",
+        "fortawesome",
+        "getac",
+        "gitlab",
+        "grindr",
+        "immer",
+        "leetcode",
+        "link",
+        "linkedin",
+        "linköping",
+        "linq",
+        "livestream",
+        "mixins",
+        "nctu",
+        "ourigin",
+        "owasp",
+        "ping",
+        "roadmap",
+        "scroller",
+        "spotify",
+        "swipeable",
+        "udemy",
+        "gamificate",
+        "gamification",
+        "gostack",
+        "heatmap",
+        "immer",
+        "iphone",
+        "launchbase",
+        "linkedin",
+        "middlewares",
+        "minmax",
+        "navs",
+        "onboarded",
+        "persistor",
+        "pickone",
+        "postgres",
+        "readonly",
+        "scrollbar",
+        "stylesheet",
+        "toastify",
+        "unform",
+        "youtube",
+    ],
+    "cSpell.ignorePaths": [                                 // Пути которые нужно игнорировать.
+        "node_modules",
+        "**/node_modules",
+        "**/node_modules/**",
+        "node_modules/**",
+        "vscode-extension",
+        ".git",
+        "*.dll",
+        "**/*.dll"
+    ],
+    "cSpell.flagWords": ["hte"],                            // Неверные слова, оскорбления, популярные ошибоки: не "hte", а "the".
+    "cSpell.spellCheckDelayMs": 60,                         // Задержка перед проверкой орфографии.
+    "cSpell.enableFiletypes": [                             // Отключить проверку орфографии для расширений.
+        "!asciidoc",
+        "!c",
+        "!cpp",
+        "!csharp",
+        "!go",
+        "!handlebars",
+        "!haskell",
+        "!jade",
+        "!java",
+        "!latex",
+        "!php",
+        "!pug",
+        "!python",
+        "!restructuredtext",
+        "!rust",
+        "!scala",
+        "!scss"
+    ],
+    // #endregion END_[Code Spell Checker] - 22. Extension #//
+
+    // #region BEGIN__[Yandex Translate] ------------------ 23. Extension #//
+    // @danger: null
+    // #endregion END_[Yandex Translate] - 23. Extension #//
+
+    // #region BEGIN__[ETC] ------------------ 23. Other #//
+    // @danger: null
+    // #endregion END_[ETC] - 23. Other #//
 }
