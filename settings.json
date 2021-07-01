@@ -27,7 +27,7 @@
  @danger: regions Other
  @info: Note
  * Настройки по умолчанию     => https://code.visualstudio.com/docs/getstarted/settings
- * Кастомизация темы          => https://code.visualstudio.com/docs/getstarted/themes
+ * Кастомизация темы          => https://code.visualstudio.com/api/references/theme-color
  * Удалить комментарии        => \/\*[\s\S]*?\*\/|([^:]|^)\/\/.*$ ==> (SHIFT + ALT + F) ==> $^\n
  */
 
