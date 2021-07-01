@@ -1,4 +1,4 @@
-/*
+/* readme
  @danger: regions General
  @danger: regions Extension
  * 01. Russian Language Pack  => https://github.com/Microsoft/vscode-loc
@@ -26,7 +26,9 @@
  * 23. Yandex Translate       => https://github.com/airstep/vscode-ext-yandex-translate
  @danger: regions Other
  @info: Note
- * Отчистить settings.json от комментариев: \/\*[\s\S]*?\*\/|([^:]|^)\/\/.*$ ==> (SHIFT + ALT + F) ==> $^\n
+ * Настройки по умолчанию     => https://code.visualstudio.com/docs/getstarted/settings
+ * Кастомизация темы          => https://code.visualstudio.com/docs/getstarted/themes
+ * Удалить комментарии        => \/\*[\s\S]*?\*\/|([^:]|^)\/\/.*$ ==> (SHIFT + ALT + F) ==> $^\n
  */
 
 {
@@ -425,3 +427,4 @@
     // @danger: null
     // #endregion END_[ETC] - 23. Other #//
 }
+
