@@ -118,6 +118,14 @@
     // @danger: .ETC
     "terminal.integrated.enableBell": true,                 // Вкл/выкл звонок терминала, отображается рядом с именем терминала.
     "terminal.integrated.scrollback": 8000,                 // Количество строк в буфере терминала.
+    "terminal.integrated.profiles.windows": {
+        "Cmder": {
+            "path": "${env:windir}\\System32\\cmd.exe",
+            "env": {"CMDER_ROOT": "D:\\_Box\\Portable_CMDer"},
+            "args": ["/k", "%CMDER_ROOT%\\vendor\\bin\\vscode_init.cmd"]
+        },
+    },
+    "terminal.integrated.defaultProfile.windows": "Cmder",
     // #endregion END_[Terminal] - General #//
 
     // #region BEGIN__[Telemetry and Update] -------------- General #//
@@ -136,16 +144,12 @@
     "window.title": "${activeEditorShort}${separator}${rootName}",
     "files.hotExit": "onExitAndWindowClose",                // Связан со строкой выше + https://github.com/Microsoft/vscode/issues/39193
     "files.defaultLanguage": "markdown",                    // Какой тип файла по умолчанию, при открытии новой вкладки.
-    "window.restoreWindows": "one",                         // При запуске VSC не открывать предыдущий сеанс, (кроме командной строки), а пустое окно.
-	"window.zoomLevel": 0,                                  // Масштаб окна. Исходный размер 0.
-    "window.newWindowDimensions": "maximized",              // Открывать новые окна во весь экран.
+    "window.restoreWindows": "one", // Масштаб окна. Исходный размер 0.
+    "window.zoomLevel": 0,
+    "window.newWindowDimensions": "maximized", // Открывать новые окна во весь экран.
     "window.openFilesInNewWindow": "on",                    // Если включен, файлы будут открываться в новом окне, а не в существующем экземпляре.
     "window.restoreFullscreen": true,                       // Запускать окто полноэкранном режиме, если оно было закрыто в полноэкранном режиме.
     // #endregion END_[Debug] - General #//
-
-    // #region BEGIN__[$$$$$] ----------------------------- General #//
-    // @danger: null
-    // #endregion END_[$$$$$] - General #//
 
     // #region BEGIN__[Files and Search] ------------------ General #//
     // @danger: null
@@ -373,10 +377,6 @@
         },
     ],
     // #endregion END_[Better Comments] - 05. Extension #//
-
-    // #region BEGIN__[Region folding] -------------------- 06. Extension #//
-    // @danger: https://github.com/maptz/Maptz.VSCode.Extensions.customfolding
-    // #endregion END_[Region folding] - 06. Extension #//
 
     // #region BEGIN__[PostCSS sorting] ------------------- 07. Extension #//
     // @danger: https://github.com/mrmlnc/vscode-postcss-sorting
@@ -778,18 +778,6 @@
     },
     // #endregion END_[PostCSS sorting] - 07. Extension #//
 
-    // #region BEGIN__[PHP Intelephense] ------------------ 08. Extension #//
-    // @danger: https://github.com/bmewburn/vscode-intelephense
-    // #endregion END_[PHP Intelephense] - 08. Extension #//
-
-    // #region BEGIN__[PHP Debug] ------------------------- 09. Extension #//
-    // @danger: https://github.com/xdebug/vscode-php-debug
-    // #endregion END_[PHP Debug] - 09. Extension #//
-
-    // #region BEGIN__[Docker] ---------------------------- 10. Extension #//
-    // @danger: https://github.com/microsoft/vscode-docker
-    // #endregion END_[Docker] - 10. Extension #//
-
     // #region BEGIN__[ESLint] ---------------------------- 11. Extension #//
     // @danger: https://github.com/Microsoft/vscode-eslint
     "eslint.validate": [
@@ -806,228 +794,4 @@
     "eslint.run": "onSave",
     // #endregion END_[ESLint] - 11. Extension #//
 
-    // #region BEGIN__[Code Runner] ----------------------- 12. Extension #//
-    // @danger: https://github.com/formulahendry/vscode-code-runner
-    // #endregion END_[Code Runner] - 12. Extension #//
-
-    // #region BEGIN__[Debugger for Chrome] --------------- 13. Extension #//
-    // @danger: https://github.com/Microsoft/vscode-chrome-debug
-    // #endregion END_[Debugger for Chrome] - 13. Extension #//
-
-    // #region BEGIN__[Python] ---------------------------- 14. Extension #//
-    // @danger: https://github.com/Microsoft/vscode-python
-    //"python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python37\\python.exe",
-    //"python.languageServer": "Microsoft",                   // https://github.com/microsoft/python-language-server
-    // #endregion END_[Python] - 14. Extension #//
-
-    // #region BEGIN__[YAML] ------------------------------ 15. Extension #//
-    // @danger: https://github.com/redhat-developer/vscode-yaml
-    // #endregion END_[YAML] - 15. Extension #//
-
-    // #region BEGIN__[Live Server] ----------------------- 16. Extension #//
-    // @danger: https://github.com/ritwickdey/vscode-live-server
-    // #endregion END_[Live Server] - 16. Extension #//
-
-    // #region BEGIN__[Vetur] ----------------------------- 17. Extension #//
-    // @danger: https://github.com/vuejs/vetur
-    // #endregion END_[Vetur] - 17. Extension #//
-
-    // #region BEGIN__[Laravel Blade Snippets] ------------ 18. Extension #//
-    // @danger: https://github.com/onecentlin/laravel-blade-snippets-vscode
-    // #endregion END_[Laravel Blade Snippets] - 18. Extension #//
-
-    // #region BEGIN__[Laravel Artisan] ------------------- 19. Extension #//
-    // @danger: https://github.com/TheColorRed/vscode-laravel-artisan
-    // #endregion END_[Laravel Artisan] - 19. Extension #//
-
-    // #region BEGIN__[LaTeX Workshop] -------------------- 20. Extension #//
-    // @danger: https://github.com/James-Yu/LaTeX-Workshop
-    "latex-workshop.latex.clean.enabled": true,
-    "latex-workshop.latex.clean.fileTypes": [
-        "*.aux",
-        "*.bbl",
-        "*.blg",
-        "*.idx",
-        "*.ind",
-        "*.lof",
-        "*.lot",
-        "*.out",
-        "*.toc",
-        "*.acn",
-        "*.acr",
-        "*.alg",
-        "*.glg",
-        "*.glo",
-        "*.gls",
-        "*.ist",
-        "*.fls",
-        "*.log",
-        "*.fdb_latexmk",
-        "*.synctex",
-        "*.synctex.gz"
-    ],
-    "latex-workshop.latex.toolchain": [
-        {
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-output-directory=build",
-                "-file-line-error",
-                "-pdf",
-                "%DOC%"
-            ]
-        }
-    ],
-    "latex-workshop.latex.outputDir": "./build",
-    // #endregion END_[LaTeX Workshop] - 20. Extension #//
-
-    // #region BEGIN__[Image preview] --------------------- 21. Extension #//
-    // @danger: https://github.com/kisstkondoros/gutter-preview
-    // #endregion END_[Image preview] - 21. Extension #//
-
-    // #region BEGIN__[Code Spell Checker] ---------------- 22. Extension #//
-    // @danger: https://github.com/streetsidesoftware/vscode-spell-checker
-    "cSpell.language": "en,ru",                             // Локальный язык при проверке орфографии.
-    "cSpell.maxNumberOfProblems": 50,                       // Контролирует количество орфографических ошибок.
-    "cSpell.numSuggestions": 8,                             // Управляет количеством отображаемых предложений.
-    "cSpell.minWordLength": 4,                              // Минимальная длина слова перед проверкой его по словарю.
-    "cSpell.enabledLanguageIds": [                          // Расширения файлов для проверки орфографии.
-        "json",
-        "jsonc",
-        "yml",
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "markdown",
-        "php",
-        "plaintext",
-        "csharp",
-        "go",
-    ],
-    "cSpell.enabled": true,                                 // Вкл/Выкл проверка орфографии.
-    "cSpell.showStatus": true,                              // Отображение статуса проверки орфографии в строке состояния.
-    "cSpell.words": [],                                     // Слова для словаря рабочей области.
-    "cSpell.allowCompoundWords": false,                     // Вкл/Выкл составных слов, пример 'errormessage'.
-    "cSpell.ignoreWords": ["behaviour"],                    // Слова, которые следует игнорировать и не предлагать.
-    "cSpell.userWords": [                                   // Слова для словаря пользовательских настройкек.
-        "Interesse",
-        "Palavras",
-        "Título",
-        "autores",
-        "chave",
-        "cifrado",
-        "livros",
-        "numero",
-        "receber",
-        "serie",
-        "Devtools",
-        "Mentoria",
-        "Reactotron",
-        "Rocketseat",
-        "adonisjs",
-        "allowed",
-        "allowed envs",
-        "bootcamp",
-        "bootcamps",
-        "cerbero",
-        "changelogs",
-        "desaturate",
-        "envs",
-        "esnext",
-        "craco",
-        "devtools",
-        "ecommerce",
-        "firestore",
-        "flexbox",
-        "fontawesome",
-        "formik",
-        "fortawesome",
-        "getac",
-        "gitlab",
-        "grindr",
-        "immer",
-        "leetcode",
-        "link",
-        "linkedin",
-        "linköping",
-        "linq",
-        "livestream",
-        "mixins",
-        "nctu",
-        "ourigin",
-        "owasp",
-        "ping",
-        "roadmap",
-        "scroller",
-        "spotify",
-        "swipeable",
-        "udemy",
-        "gamificate",
-        "gamification",
-        "gostack",
-        "heatmap",
-        "immer",
-        "iphone",
-        "launchbase",
-        "linkedin",
-        "middlewares",
-        "minmax",
-        "navs",
-        "onboarded",
-        "persistor",
-        "pickone",
-        "postgres",
-        "readonly",
-        "scrollbar",
-        "stylesheet",
-        "toastify",
-        "unform",
-        "youtube",
-    ],
-    "cSpell.ignorePaths": [                                 // Пути которые нужно игнорировать.
-        "node_modules",
-        "**/node_modules",
-        "**/node_modules/**",
-        "node_modules/**",
-        "vscode-extension",
-        ".git",
-        "*.dll",
-        "**/*.dll"
-    ],
-    "cSpell.flagWords": ["hte"],                            // Неверные слова, оскорбления, популярные ошибоки: не "hte", а "the".
-    "cSpell.spellCheckDelayMs": 60,                         // Задержка перед проверкой орфографии.
-    "cSpell.enableFiletypes": [                             // Отключить проверку орфографии для расширений.
-        "!asciidoc",
-        "!c",
-        "!cpp",
-        "!csharp",
-        "!go",
-        "!handlebars",
-        "!haskell",
-        "!jade",
-        "!java",
-        "!latex",
-        "!php",
-        "!pug",
-        "!python",
-        "!restructuredtext",
-        "!rust",
-        "!scala",
-        "!scss"
-    ],
-    // #endregion END_[Code Spell Checker] - 22. Extension #//
-
-    // #region BEGIN__[Yandex Translate] ------------------ 23. Extension #//
-    // @danger: https://github.com/airstep/vscode-ext-yandex-translate
-    // #endregion END_[Yandex Translate] - 23. Extension #//
-
-    // #region BEGIN__[DotENV] ---------------------------- 24. Extension #//
-    // @danger: https://github.com/mikestead/vscode-dotenv
-    // #endregion END_[DotENV] - 24. Extension #//
-
-    // #region BEGIN__[ETC] ------------------------------- Other #//
-    // @danger: null
-    // #endregion END_[ETC] - Other #//
 }
