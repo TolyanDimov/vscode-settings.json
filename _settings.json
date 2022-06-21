@@ -1,370 +1,679 @@
-{
-    "workbench.colorTheme": "GitHub Dark Default",
-    "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.folders.theme": "classic",
-    "material-icon-theme.hidesExplorerArrows": false,
-    "material-icon-theme.folders.color": "#6e7681",
-    "editor.fontSize": 13,
-    "editor.fontWeight": 400,
-    "editor.lineHeight": 23,
-    "editor.fontFamily": "\"Fira Code iScript\", \"Fira Code\", \"JetBrains Mono\", monospace",
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": "keyword",
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "storage",
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "comment",
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "variable.language",
-                "settings": {
-                    "fontStyle": ""
-                }
-            }
-        ]
-    },
-    "editor.tabSize": 2,
-    "editor.renderWhitespace": "boundary",
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 500,
-    "editor.cursorStyle": "block",
-    "editor.cursorBlinking": "smooth",
-    "editor.multiCursorModifier": "alt",
-    "editor.insertSpaces": true,
-    "editor.wordWrap": "off",
-    "editor.suggestSelection": "recentlyUsedByPrefix",
-    "prettier.semi": false,
-    "prettier.singleQuote": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.fontLigatures": true,
-    "editor.minimap.enabled": true,
-    "editor.minimap.maxColumn": 60,
-    "editor.minimap.renderCharacters": false,
-    "editor.minimap.showSlider": "always",
-    "editor.renderLineHighlight": "all",
-    "editor.autoIndent": "full",
-    "extensions.ignoreRecommendations": false,
-    "breadcrumbs.enabled": true,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "files.exclude": {
-        "**/.build": true,
-        "**/.git": true,
-        "**/.err": true,
-        "**/.rec": true,
-        "**/.log": true,
-        "**/.evt": true,
-        "**/.DS_Store": true,
-        "**/.hg": true,
-        "**/.svn": true,
-        "**/CVS": true,
-        "**/__MACOSX": true,
-        "**/*._*": true,
-        "**/node_modules/**": true,
-        "**/out/**": true,
-        "**/issues/**": true,
-        "**/*.map": true,
-        "**/*.tds": true,
-        "**/*.tmp": true,
-        "**/*.ico": true,
-        "**/*.{res,RES}": true,
-        "**/*.rc": true,
-        "**/*.bak?": true,
-        "**/*.dcu": true,
-        "**/*.bpl": true,
-        "**/*.rsb": true,
-        "**/*.scssc": true,
-        "**/*.cssc": true,
-        "**/db.json": true,
-        "**/*.min.*": true,
-        "**/*.log.*": true,
-        "**/dist": true,
-        "**/tmp": true,
-        "**/cache": true,
-        "**/test_assets": true,
-        "**/public": true,
-        "**/.deploy_git": true,
-        "**/rethinkdb_data": true,
-        "**/lcov-report": true,
-        "**/*.dfm": {
-            "when": "$(basename).pas"
-        },
-        "**/*.fmx": {
-            "when": "$(basename).pas"
-        },
-        "**/*.~dfm": {
-            "when": "$(basename).pas"
-        },
-        "**/*.ddp": {
-            "when": "$(basename).pas"
-        },
-        "**/*.~ddp": {
-            "when": "$(basename).pas"
-        },
-        "**/*.~pas": {
-            "when": "$(basename).pas"
-        },
-        "**/*.exe": {
-            "when": "$(basename).dpr"
-        },
-        "**/*.used": {
-            "when": "$(basename).dpr"
-        },
-        "**/*.stat": {
-            "when": "$(basename).dpr"
-        },
-        "**/*.identcache": {
-            "when": "$(basename).dpr"
-        },
-        "**/*.dcr": {
-            "when": "$(basename).pas"
-        },
-        "**/*.dof": {
-            "when": "$(basename).dpk"
-        },
-        "**/__history/**": true,
-        "**/__recovery/**": true,
-        "**/Win32/**": true,
-        "**/*.class": true,
-        "**/*.dll": true,
-        "**/*.jar": true,
-        "**/*.local": true,
-        "**/*.fbl8": {
-            "when": "$(basename).fbp8"
-        },
-        "**/*.fb8lck": {
-            "when": "$(basename).fbp8"
-        },
-        "**/*.fbpbrk": {
-            "when": "$(basename).fbp8"
-        },
-        "**/*.fbpInf": {
-            "when": "$(basename).fbp8"
-        }
-    },
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true,
-        ".build/**": true,
-        "out*/**": true,
-        "i18n/**": true,
-        "extensions/**/out/**": true,
-        "*.min.js": true
-    },
-    "files.associations": {
-        "*.atml": "html",
-        "*.htm": "html",
-        "*.fish": "powershell",
-        "*.vue": "vue",
-        "*.js": "javascript",
-        "*.mdx": "markdown",
-        ".babelrc": "json",
-        ".huskyrc": "json",
-        ".sequelizerc": "javascript",
-        ".stylelintrc": "json",
-        ".prettierrc": "json",
-        "*.tsx": "typescriptreact",
-        ".env.*": "dotenv",
-        "*.tokens": "json",
-        "*.tree": "json",
-        "deque": "cpp",
-        "list": "cpp",
-        "vector": "cpp",
-        "xstring": "cpp",
-        ".james": "json",
-        "*.dproj": "xml",
-        "*.groupproj": "xml",
-        "*.dof": "ini",
-        "*.cfg": "ini",
-        "*.psc": "pascal",
-        "*.inc": "pascal"
-    },
-    "workbench.editor.enablePreview": false,
-    "[handlebars]": {
-        "editor.formatOnSave": false
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.wordWrap": "on"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[pascal]": {
-        "files.encoding": "windows1252"
-    },
-    "[Log]": {
-        "editor.minimap.enabled": false,
-        "editor.fontLigatures": false
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[plaintext]": {
-        "editor.fontLigatures": false
-    },
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.fontFamily": "\"Fira Code iScript\", \"Fira Code\", \"JetBrains Mono\", monospace",
-    "terminal.integrated.lineHeight": 1.1,
-    "terminal.integrated.fontSize": 13,
-    "terminal.integrated.scrollback": 8000,
-    "terminal.integrated.enableBell": true,
-    "terminal.integrated.showExitAlert": false,
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "emmet.showAbbreviationSuggestions": true,
-    "emmet.showSuggestionsAsSnippets": true,
-    "emmet.triggerExpansionOnTab": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "screencastMode.onlyKeyboardShortcuts": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.dragAndDrop": false,
-    "editor.folding": true,
-    "editor.renderIndentGuides": true,
-    "editor.smoothScrolling": true,
-    "editor.suggest.localityBonus": true,
-    "editor.tabCompletion": "on",
-    "workbench.editor.closeOnFileDelete": false,
-    "workbench.editor.revealIfOpen": true,
-    "workbench.list.smoothScrolling": true,
-    "workbench.editor.showTabs": true,
-    "workbench.editor.closeEmptyGroups": true,
-    "workbench.sideBar.location": "left",
-    "search.collapseResults": "auto",
-    "search.quickOpen.includeSymbols": false,
-    "search.showLineNumbers": true,
-    "search.smartCase": true,
-    "search.useIgnoreFiles": true,
-    "search.followSymlinks": true,
-    "scss.validate": true,
-    "css.validate": true,
-    "php.validate.enable": false,
-    "php.suggest.basic": false,
-    "workbench.commandPalette.preserveInput": true,
-    "workbench.editor.highlightModifiedTabs": true,
-    "workbench.editor.scrollToSwitchTabs": true,
-    "workbench.editor.tabSizing": "shrink",
-    "workbench.list.horizontalScrolling": true,
-    "workbench.list.keyboardNavigation": "filter",
-    "workbench.statusBar.visible": true,
-    "workbench.view.alwaysShowHeaderActions": true,
-    "editor.cursorSmoothCaretAnimation": true,
-    "window.restoreFullscreen": true,
-    "window.restoreWindows": "all",
-    "window.newWindowDimensions": "maximized",
-    "window.titleBarStyle": "custom",
-    "files.trimTrailingWhitespace": true,
-    "editor.mouseWheelScrollSensitivity": 5,
-    "workbench.tips.enabled": true,
-    "editor.hideCursorInOverviewRuler": true,
-    "editor.renderControlCharacters": true,
-    "editor.scrollBeyondLastLine": false,
-    "editor.showFoldingControls": "always",
-    "editor.snippetSuggestions": "top",
-    "editor.unfoldOnClickAfterEndOfLine": true,
-    "files.insertFinalNewline": true,
-    "files.simpleDialog.enable": true,
-    "debug.inlineValues": true,
-    "editor.foldingStrategy": "indentation",
-    "typescript.tsserver.log": "off",
-    "javascript.suggest.autoImports": true,
-    "typescript.suggest.autoImports": true,
-    "security.workspace.trust.untrustedFiles": "newWindow",
-    "editor.gotoLocation.multipleDeclarations": "goto",
-    "editor.gotoLocation.multipleDefinitions": "goto",
-    "editor.gotoLocation.multipleImplementations": "goto",
-    "editor.gotoLocation.multipleReferences": "goto",
-    "editor.gotoLocation.multipleTypeDefinitions": "gotoAndPeek",
-    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
-    "javascript.preferences.importModuleSpecifier": "relative",
-    "javascript.preferences.quoteStyle": "single",
-    "javascript.suggest.completeFunctionCalls": true,
-    "editor.linkedEditing": true,
-    "html.format.templating": true,
-    "git.allowForcePush": true,
-    "git.fetchOnPull": true,
-    "git.inputValidationSubjectLength": 72,
-    "merge-conflict.diffViewPosition": "Below",
-    "typescript.preferences.quoteStyle": "single",
-    "typescript.referencesCodeLens.showOnAllFunctions": true,
-    "git.suggestSmartCommit": false,
-    "debug.allowBreakpointsEverywhere": true,
-    "markdown.preview.markEditorSelection": true,
-    "window.title": "${dirty} ${activeEditorShort}${separator}${rootName}",
-    "debug.showInStatusBar": "always",
-    "zenMode.centerLayout": true,
-    "editor.matchBrackets": "always",
-    "debug.toolBarLocation": "docked",
-    "typescript.referencesCodeLens.enabled": true,
-    "typescript.implementationsCodeLens.enabled": true,
-    "window.openFilesInNewWindow": "off",
-    "files.hotExit": "onExitAndWindowClose",
-    "references.preferredLocation": "view",
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-    "git.autofetch": true,
-    "typescript.reportStyleChecksAsWarnings": false,
-    "zenMode.hideStatusBar": false,
-    "zenMode.fullScreen": false,
-    "typescript.updateImportsOnFileMove.enabled": "never",
-    "update.mode": "none",
-    "update.showReleaseNotes": true,
-    "extensions.autoCheckUpdates": false,
-    "extensions.autoUpdate": true,
-    "workbench.enableExperiments": false,
-    "notebook.experimental.useMarkdownRenderer": false,
-    "terminal.integrated.experimentalLinkProvider": false,
-    "js/ts.implicitProjectConfig.experimentalDecorators": false,
-    "typescript.tsserver.experimental.enableProjectDiagnostics": false,
-    "workbench.activityBar.visible": true,
-    "workbench.colorCustomizations": {
-        "editorWhitespace.foreground": "#161b22",
-    },
-    "workbench.editor.centeredLayoutAutoResize": false,
-    "workbench.list.automaticKeyboardNavigation": false,
-    "explorer.enableDragAndDrop": false,
-    "editor.lineNumbers": "on",
-    "editor.mouseWheelZoom": false,
-    "editor.trimAutoWhitespace": true,
-    "diffEditor.renderSideBySide": true,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-    "zenMode.silentNotifications": false,
-    "editor.parameterHints.enabled": false,
-    //END
-}
+/**
+ * Свернуть/развернуть все регионы      => Ctrl+K Ctrl+8 / Ctrl+K Ctrl+J
+ *
+ * Настройки по умолчанию               => https://code.visualstudio.com/docs/getstarted/settings
+ * Кастомизация темы                    => https://code.visualstudio.com/api/references/theme-color
+ * Удалить комментарии и пустые строки  => \/\*[\s\S]*?\*\/|([^:]|^)\/\/.*$ ==> (SHIFT + ALT + F) ==> $^\n
+ ** ! Параметры в регионе «телементрия и обновления» имеют проблемы, по мнению VSCode.
+ ** https://www.reddit.com/r/privacy/comments/80d8wu/just_realised_that_visual_studio_code_sends/
+ */
 
+{
+	// #region - Терминал
+	"terminal.integrated.profiles.windows": {
+		"Cmder": {
+			"path": "C:\\Windows\\System32\\cmd.exe",
+			"args": ["/k", "%CMDER_ROOT%\\vendor\\bin\\vscode_init.cmd"],
+			"overrideName": true, // Имя профиля для вкладок терминала.
+			"icon": "terminal-powershell", // Иконка для вкладок терминала.
+			"color": "terminal.ansiGreen" // Цвет иконки для вкладок терминала.
+		},
+		"Bash": {
+			"source": "Git Bash", // Автоопределение пути к оболочке.
+			"overrideName": true, // Имя профиля для вкладок терминала.
+			"icon": "terminal-bash", // Иконка для вкладок терминала.
+			"color": "terminal.ansiBlue" // Цвет иконки для вкладок терминала.
+		},
+		"PowerShell": null, // Убрать оболочку из списка при выборе профиля терминала.
+		"Command Prompt": null, // Не показывать в списке.
+		"JavaScript Debug Terminal": null //
+	},
+	"terminal.integrated.defaultProfile.windows": "Cmder",
+	"window.zoomLevel": -1,
+	"workbench.tree.renderIndentGuides": "always", // В дереве отображать направляющие отступы.
+	"workbench.tree.indent": 16, // Отступ в проводнике для дерева.
+	"explorer.compactFolders": false, // Мини дерево, проводник.
+	"workbench.startupEditor": "none", // Не отображать страницу приветствия при открытии редактора.
+	"workbench.colorTheme": "GitHub Dark Default",
+	"editor.wordWrap": "off", // Перенос строк on/off или wordWrapColumn/bounded.
+	"editor.wordWrapColumn": 120, // Управление переносм строк.
+	"workbench.commandPalette.preserveInput": true, // Показать последний ввод в палитру команд при следующим открытии.
+	"editor.parameterHints.enabled": false, // Всплывающее окно c документацией по мере ввода кода.
+	"window.title": "${activeEditorShort}${separator}${rootName}",
+	"breadcrumbs.enabled": false, // Хлебные крошки под вкладками редактора.
+	"window.newWindowDimensions": "maximized", // Открывать новые окна во весь экран.
+	"window.menuBarVisibility": "compact", // Главное меню в шапке окна.
+	"workbench.colorCustomizations": {
+		"editorRuler.foreground": "#ffffff08", // цвет вертикальные линии.
+		"editorWhitespace.foreground": "#ffffff10"
+	},
+	// #endregion
+
+	// #region - Вид - Шривты и лигатуры
+	"editor.unicodeHighlight.nonBasicASCII": false, // Подсветка кириллицы и нестандартный символов ASCII.
+	"editor.fontLigatures": true, // Включить или отключить лигатуры <==>.
+	"editor.fontFamily": "'Consolas ligaturized v2', Menlo, Consolas, 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono', 'Oxygen Mono', 'Liberation Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+	"editor.fontSize": 14, // if zoom:-1 = 14, else 12
+	"editor.fontWeight": "400",
+	"editor.lineHeight": 21,
+	"editor.letterSpacing": -0.1,
+	"editor.suggestFontSize": 12,
+	"terminal.integrated.fontFamily": "'Consolas ligaturized v2', Menlo, Consolas, 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono', 'Oxygen Mono', 'Liberation Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+	"terminal.integrated.fontSize": 14, // if zoom:-1 = 14, else 12
+	"terminal.integrated.fontWeight": "normal",
+	"terminal.integrated.fontWeightBold": "bold",
+	"debug.console.fontFamily": "Consolas, 'Courier New', monospace",
+	"debug.console.fontSize": 13,
+	"markdown.preview.fontFamily": "-apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'",
+	"markdown.preview.fontSize": 12,
+	// #endregion
+
+	// #region - Файлы - Сохранение, удаление, перемещение файлов
+	"files.autoSave": "afterDelay", // Автосохранение по тамингу
+	"files.autoSaveDelay": 1000, // Тайминг автосохранения 1сек.
+	// FIX https://stackoverflow.com/questions/61827206/vscode-disable-all-auto-formatting-on-save
+	// "editor.codeActionsOnSave": {
+	//     "source.fixAll": false,
+	//     "source.fixAll.eslint": false
+	// }
+	"explorer.confirmDelete": false, // Запрашивать подтверждение при удаление файлов и папок.
+	"explorer.confirmDragAndDrop": false, // Запрашивать подтверждение при перемещении файлов и папок.
+	// #endregion
+
+	// #region - Стиль - Табуляция, пробелы, отступы, направляюще, скобоки, кавычки
+	"editor.tabSize": 4, // Число пробелов в табуляции.
+	"editor.insertSpaces": false, // В табуляции отображать символы пробела, иначе символ табуляции.
+	"editor.detectIndentation": false, // Параметры "#editor.tabSize#" и "#editor.insertSpaces#" определяться автоматически.
+	"editor.renderWhitespace": "boundary", // В редакторе отображать пробелы.
+	"editor.guides.indentation": true, // В редакторе отображаться направляющие отступы.
+	"editor.guides.bracketPairs": "active", // В коде отображать направляющие скобок.
+	"editor.autoClosingBrackets": "beforeWhitespace", // Автоматически добавлять закрывающую скобку при вводе пользователем открывающей скобки.
+	"editor.autoClosingDelete": "auto", // Удалять соседние закрывающие кавычки или квадратные скобки при удалении.
+	"editor.autoClosingOvertype": "auto", // Заменять закрывающие кавычки или скобки при вводе.
+	"editor.autoClosingQuotes": "beforeWhitespace", // Автоматически закрывать кавычки, если пользователь добавил открывающую кавычку.
+	"editor.bracketPairColorization.enabled": true, // Активирует раскраску цветом для парных скобок.
+	"files.trimTrailingWhitespace": true, // Удалять конечный пробел в строках.
+	"files.trimFinalNewlines": true, // Удалять все пустые строки за последней новой строкой в конце файла.
+	"editor.rulers": [60, 80, 120], // Вертикальные линии.
+	// #endregion
+
+	// #region - Форматирование для всех
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnType": true, // Автоформатирование при вводе.
+	"editor.formatOnPaste": false, // Автоформатирование при копипасте.
+	"editor.formatOnSave": false, // Автоформатирование при сохранении.
+	"typescript.preferences.quoteStyle": "single",
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	// #endregion
+
+	// #region - Переопредение параметров для различных языков и типов файлов
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[handlebars]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[markdown]": {
+		"editor.wordWrap": "off"
+	},
+	"[plaintext]": {
+		"files.insertFinalNewline": false
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	// Определяет, должны ли при вводе текста автоматически отображаться предложения.
+	"editor.quickSuggestions": {
+		"other": "inline",
+		"comments": "inline",
+		"strings": "inline"
+	},
+	"emmet.excludeLanguages": [], // Массив языков, в которых не должны развертываться сокращения Emmet.
+	// #endregion
+
+	// #region - Стиль - Курсор
+	"editor.cursorStyle": "block",
+	"editor.cursorBlinking": "smooth",
+	"editor.cursorSmoothCaretAnimation": true,
+	"editor.cursorSurroundingLines": 2,
+	"terminal.integrated.cursorBlinking": true,
+	// #endregion
+
+	// #region - Стиль - Скролл, прокрутка
+	"editor.scrollBeyondLastLine": false,
+	"editor.scrollbar.verticalScrollbarSize": 8,
+	"editor.scrollbar.horizontalScrollbarSize": 10,
+	"editor.smoothScrolling": true,
+	"workbench.list.smoothScrolling": true,
+	// #endregion
+
+	// #region - Стиль - Миникарта
+	"editor.minimap.enabled": false, // Определяетм стиль миникарты.
+	"editor.minimap.maxColumn": 70, // Ширина миникарты.
+	"editor.minimap.showSlider": "always", // Отображать ползунок экрана на миникарте.
+	"editor.minimap.size": "proportional", // Размером содержимого.
+	// #endregion
+
+	// #region - Телеметрия, обновления
+	"telemetry.enableCrashReporter": false, // Нужно ли отправлять телеметрию.
+	"telemetry.enableTelemetry": false,
+	"telemetry.telemetryLevel": "off",
+	"update.channel": "none", // Нужно ли получать автоматические обновления.
+	"update.mode": "none",
+	"update.enableWindowsBackgroundUpdates": false, // Нужно ли скачивать и устанавливать обновления в фоновом режиме.
+	"update.showReleaseNotes": false, // Нужно ли показывать примечания к выпуску после обновления.
+	"extensions.ignoreRecommendations": true, // Нужно ли отображать рекомендации по расширениям.
+	"extensions.autoCheckUpdates": false, // Нужно ли проверять новые версии расширений.
+	"extensions.autoUpdate": false, // Нужно ли скачивать и устанавливать обновления для расширений.
+	// #endregion
+
+	// #region - Файлы - Ассоциации, наблюдение, поиск файлов
+	"files.associations": {
+		// Ассоциации файлов с языками.
+		"*.htm": "html"
+	},
+	"files.watcherExclude": {
+		// Исключение из наблюдения за файлами.
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/node_modules/*/**": true,
+		"**/.hg/store/**": true
+	},
+	"files.exclude": {
+		// Исключение файлов и папок из дерева проводника.
+		"**/package-lock.json": true,
+		"**/node_*": true,
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true
+	},
+	"search.exclude": {
+		// Исключение файлов  при полнотекстовом поиске. Наследует стандартные маски от "#files.exclude#"
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true
+	},
+	// #endregion
+
+	// #region - Плагин - esbenp.prettier-vscode
+	"prettier.requireConfig": true,
+	"prettier.trailingComma": "none", // Конечные запятые.
+	"prettier.tabWidth": 4, // Размер таба.
+	"prettier.useTabs": true, // Отступы с помощью табуляции, а не пробела.
+	"prettier.semi": false, // Точки с запятой в конце.
+	"prettier.singleQuote": true, // Одинарные кавычки, а не двойные.
+	"prettier.printWidth": 100, // Длина строки, на которую будет наноситься печать.
+	"prettier.useEditorConfig": true, // EditorConfig
+	"prettier.withNodeModules": true, //
+	"prettier.arrowParens": "always", // Это врендно менять. Круглые скобки (x) => x.
+	"prettier.bracketSpacing": false, // Пробелы { foo: bar }, false {foo: bar}.
+	"prettier.endOfLine": "lf",
+	"prettier.htmlWhitespaceSensitivity": "ignore", // Пробелы
+	"prettier.insertPragma": false,
+	"prettier.jsxBracketSameLine": true,
+	"prettier.jsxSingleQuote": false, // Одинарные кавычки, а не двойные.
+	"prettier.quoteProps": "consistent",
+	// #endregion
+
+	// #region - Плагин - yzhang.markdown-all-in-one
+	"markdown.extension.italic.indicator": "_",
+	"markdown.extension.toc.levels": "2..6",
+	"markdown.extension.toc.omittedFromToc": {
+		"README.md": ["## Table of Contents"]
+	},
+	"markdown.extension.toc.unorderedList.marker": "*",
+	"markdown.extension.toc.updateOnSave": false,
+	// #endregion
+
+	// #region - Плагин - aaron-bond.better-comments
+	"better-comments.tags": [
+		{
+			"tag": "#region",
+			"color": "#768390",
+			"backgroundColor": "transparent",
+			"underline": false
+		},
+		{
+			"tag": "#endregion",
+			"color": "#768390",
+			"backgroundColor": "transparent",
+			"underline": false
+		}
+	],
+	// #endregion
+
+	// #region - Плагин - mrmlnc.vscode-postcss-sorting
+	"postcssSorting.config": {
+		"order": [
+			"custom-properties",
+			{
+				"type": "at-rule",
+				"name": "mixin"
+			},
+			"declarations",
+			"at-rules",
+			"rules"
+		],
+		"properties-order": [
+			"content",
+			"position",
+			"top",
+			"right",
+			"bottom",
+			"left",
+			"z-index",
+			"display",
+			"-webkit-flex",
+			"-ms-flex",
+			"flex",
+			"-webkit-flex-grow",
+			"flex-grow",
+			"-webkit-flex-shrink",
+			"flex-shrink",
+			"-webkit-flex-basis",
+			"flex-basis",
+			"-webkit-flex-flow",
+			"flex-flow",
+			"-webkit-flex-direction",
+			"-ms-flex-direction",
+			"flex-direction",
+			"-webkit-flex-wrap",
+			"flex-wrap",
+			"-webkit-justify-content",
+			"justify-content",
+			"-webkit-align-content",
+			"align-content",
+			"-webkit-align-items",
+			"align-items",
+			"-webkit-order",
+			"-ms-flex-order",
+			"order",
+			"-ms-grid-row-align",
+			"-webkit-align-self",
+			"align-self",
+			"-ms-grid-column-align",
+			"justify-self",
+			"grid",
+			"grid-area",
+			"grid-auto-columns",
+			"grid-auto-flow",
+			"grid-auto-rows",
+			"grid-column",
+			"grid-column-end",
+			"-ms-grid-column-span",
+			"grid-column-gap",
+			"-ms-grid-column",
+			"grid-column-start",
+			"grid-gap",
+			"grid-row",
+			"grid-row-end",
+			"-ms-grid-row-span",
+			"grid-row-gap",
+			"-ms-grid-row",
+			"grid-row-start",
+			"grid-template",
+			"grid-template-areas",
+			"-ms-grid-columns",
+			"grid-template-columns",
+			"-ms-grid-rows",
+			"grid-template-rows",
+			"float",
+			"clear",
+			"-webkit-box-sizing",
+			"-moz-box-sizing",
+			"box-sizing",
+			"width",
+			"min-width",
+			"max-width",
+			"height",
+			"min-height",
+			"max-height",
+			"margin",
+			"margin-top",
+			"margin-right",
+			"margin-bottom",
+			"margin-left",
+			"padding",
+			"padding-top",
+			"padding-right",
+			"padding-bottom",
+			"padding-left",
+			"overflow",
+			"-ms-overflow-x",
+			"overflow-x",
+			"-ms-overflow-y",
+			"overflow-y",
+			"-webkit-overflow-scrolling",
+			"-ms-overflow-style",
+			"list-style",
+			"list-style-position",
+			"list-style-type",
+			"list-style-image",
+			"border-collapse",
+			"border-spacing",
+			"table-layout",
+			"empty-cells",
+			"caption-side",
+			"font",
+			"font-style",
+			"font-variant",
+			"font-weight",
+			"font-stretch",
+			"font-size",
+			"line-height",
+			"font-family",
+			"letter-spacing",
+			"vertical-align",
+			"text-align",
+			"direction",
+			"color",
+			"text-transform",
+			"text-decoration",
+			"font-size-adjust",
+			"font-effect",
+			"font-emphasize",
+			"font-emphasize-position",
+			"font-emphasize-style",
+			"-webkit-font-smoothing",
+			"-moz-osx-font-smoothing",
+			"font-smooth",
+			"-webkit-text-align-last",
+			"-moz-text-align-last",
+			"-ms-text-align-last",
+			"text-align-last",
+			"word-spacing",
+			"white-space",
+			"text-emphasis",
+			"text-emphasis-color",
+			"text-emphasis-style",
+			"text-emphasis-position",
+			"text-indent",
+			"-ms-text-justify",
+			"text-justify",
+			"-ms-writing-mode",
+			"text-outline",
+			"text-wrap",
+			"-ms-text-overflow",
+			"text-overflow",
+			"text-overflow-ellipsis",
+			"text-overflow-mode",
+			"text-orientation",
+			"-ms-word-wrap",
+			"word-wrap",
+			"-ms-word-break",
+			"word-break",
+			"-moz-tab-size",
+			"-o-tab-size",
+			"overflow-wrap",
+			"tab-size",
+			"-webkit-hyphens",
+			"-moz-hyphens",
+			"hyphens",
+			"unicode-bidi",
+			"columns",
+			"column-count",
+			"column-fill",
+			"column-gap",
+			"column-rule",
+			"column-rule-color",
+			"column-rule-style",
+			"column-rule-width",
+			"column-span",
+			"column-width",
+			"text-shadow",
+			"page-break-after",
+			"page-break-before",
+			"page-break-inside",
+			"src",
+			"background",
+			"background-color",
+			"background-image",
+			"background-repeat",
+			"background-position",
+			"-ms-background-position-x",
+			"background-position-x",
+			"-ms-background-position-y",
+			"background-position-y",
+			"-webkit-background-size",
+			"-moz-background-size",
+			"-o-background-size",
+			"background-size",
+			"-webkit-background-clip",
+			"-moz-background-clip",
+			"background-clip",
+			"background-origin",
+			"background-attachment",
+			"box-decoration-break",
+			"background-blend-mode",
+			"border",
+			"border-width",
+			"border-style",
+			"border-color",
+			"border-top",
+			"border-top-width",
+			"border-top-style",
+			"border-top-color",
+			"border-right",
+			"border-right-width",
+			"border-right-style",
+			"border-right-color",
+			"border-bottom",
+			"border-bottom-width",
+			"border-bottom-style",
+			"border-bottom-color",
+			"border-left",
+			"border-left-width",
+			"border-left-style",
+			"border-left-color",
+			"-webkit-border-radius",
+			"-moz-border-radius",
+			"border-radius",
+			"-webkit-border-top-left-radius",
+			"-moz-border-radius-topleft",
+			"border-top-left-radius",
+			"-webkit-border-top-right-radius",
+			"-moz-border-radius-topright",
+			"border-top-right-radius",
+			"-webkit-border-bottom-right-radius",
+			"-moz-border-radius-bottomright",
+			"border-bottom-right-radius",
+			"-webkit-border-bottom-left-radius",
+			"-moz-border-radius-bottomleft",
+			"border-bottom-left-radius",
+			"-webkit-border-image",
+			"-moz-border-image",
+			"-o-border-image",
+			"border-image",
+			"-webkit-border-image-source",
+			"-moz-border-image-source",
+			"-o-border-image-source",
+			"border-image-source",
+			"-webkit-border-image-slice",
+			"-moz-border-image-slice",
+			"-o-border-image-slice",
+			"border-image-slice",
+			"-webkit-border-image-width",
+			"-moz-border-image-width",
+			"-o-border-image-width",
+			"border-image-width",
+			"-webkit-border-image-outset",
+			"-moz-border-image-outset",
+			"-o-border-image-outset",
+			"border-image-outset",
+			"-webkit-border-image-repeat",
+			"-moz-border-image-repeat",
+			"-o-border-image-repeat",
+			"border-image-repeat",
+			"outline",
+			"outline-width",
+			"outline-style",
+			"outline-color",
+			"outline-offset",
+			"-webkit-box-shadow",
+			"-moz-box-shadow",
+			"box-shadow",
+			"-webkit-transform",
+			"-moz-transform",
+			"-ms-transform",
+			"-o-transform",
+			"transform",
+			"-webkit-transform-origin",
+			"-moz-transform-origin",
+			"-ms-transform-origin",
+			"-o-transform-origin",
+			"transform-origin",
+			"-webkit-backface-visibility",
+			"-moz-backface-visibility",
+			"backface-visibility",
+			"-webkit-perspective",
+			"-moz-perspective",
+			"perspective",
+			"-webkit-perspective-origin",
+			"-moz-perspective-origin",
+			"perspective-origin",
+			"-webkit-transform-style",
+			"-moz-transform-style",
+			"transform-style",
+			"visibility",
+			"cursor",
+			"opacity",
+			"interpolation-mode",
+			"-webkit-filter",
+			"filter",
+			"backdrop-filter",
+			"-webkit-transition",
+			"-moz-transition",
+			"-ms-transition",
+			"-o-transition",
+			"transition",
+			"-webkit-transition-delay",
+			"-moz-transition-delay",
+			"-ms-transition-delay",
+			"-o-transition-delay",
+			"transition-delay",
+			"-webkit-transition-timing-function",
+			"-moz-transition-timing-function",
+			"-ms-transition-timing-function",
+			"-o-transition-timing-function",
+			"transition-timing-function",
+			"-webkit-transition-duration",
+			"-moz-transition-duration",
+			"-ms-transition-duration",
+			"-o-transition-duration",
+			"transition-duration",
+			"-webkit-transition-property",
+			"-moz-transition-property",
+			"-ms-transition-property",
+			"-o-transition-property",
+			"transition-property",
+			"-webkit-animation",
+			"-moz-animation",
+			"-ms-animation",
+			"-o-animation",
+			"animation",
+			"-webkit-animation-name",
+			"-moz-animation-name",
+			"-ms-animation-name",
+			"-o-animation-name",
+			"animation-name",
+			"-webkit-animation-duration",
+			"-moz-animation-duration",
+			"-ms-animation-duration",
+			"-o-animation-duration",
+			"animation-duration",
+			"-webkit-animation-play-state",
+			"-moz-animation-play-state",
+			"-ms-animation-play-state",
+			"-o-animation-play-state",
+			"animation-play-state",
+			"-webkit-animation-timing-function",
+			"-moz-animation-timing-function",
+			"-ms-animation-timing-function",
+			"-o-animation-timing-function",
+			"animation-timing-function",
+			"-webkit-animation-delay",
+			"-moz-animation-delay",
+			"-ms-animation-delay",
+			"-o-animation-delay",
+			"animation-delay",
+			"-webkit-animation-iteration-count",
+			"-moz-animation-iteration-count",
+			"-ms-animation-iteration-count",
+			"-o-animation-iteration-count",
+			"animation-iteration-count",
+			"-webkit-animation-direction",
+			"-moz-animation-direction",
+			"-ms-animation-direction",
+			"-o-animation-direction",
+			"animation-direction",
+			"-webkit-animation-fill-mode",
+			"-moz-animation-fill-mode",
+			"-ms-animation-fill-mode",
+			"-o-animation-fill-mode",
+			"animation-fill-mode",
+			"appearance",
+			"clip",
+			"clip-path",
+			"counter-reset",
+			"counter-increment",
+			"resize",
+			"-webkit-user-select",
+			"-moz-user-select",
+			"-ms-user-select",
+			"user-select",
+			"-webkit-tap-highlight-color",
+			"nav-index",
+			"nav-up",
+			"nav-right",
+			"nav-down",
+			"nav-left",
+			"pointer-events",
+			"quotes",
+			"touch-action",
+			"will-change",
+			"zoom",
+			"fill",
+			"fill-rule",
+			"clip-rule",
+			"stroke"
+		],
+		"unspecified-properties-position": "bottom"
+	},
+	// #endregion //
+
+	// #region - Плагин - mrmlnc.vscode-attrs-sorter
+	"attrsSorter.order": [
+		"class",
+		"id",
+		"name",
+		"data-.+",
+		"ng-.+",
+		"src",
+		"for",
+		"type",
+		"href",
+		"values",
+		"title",
+		"alt",
+		"role",
+		"aria-.+",
+		"$unknown$"
+	],
+	// #endregion
+	"NULL": "NULL"
+}
